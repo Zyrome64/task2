@@ -3,12 +3,23 @@
 using namespace std;
 
 int fib(int n){
-    if(n == 1  || n == 2){
-        return n-1;
+    int e1=0, e2=1;
+    bool f=true;
+
+    cout << e1 << n << e2 << n;
+    for (int i=0; i<n-2; i++){
+        if(f){
+            e1 += e2;
+            cout << e1 << n;
+        } else{
+            e2 += e1;
+            cout << e2 << n;
+        }
+        f = fzf;
     }
-    return fib(n-1) + fib(n-2);
 }
 
 int main(){
-    cout << fib(10);
+    fib(10);
 }
+
